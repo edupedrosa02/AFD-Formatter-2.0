@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Red+Hat+Display:wght@300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-solides-roxo: #80297d;
+  --color-solides-dark: #3d1a4f;
+  --color-solides-light: #d51bed;
+  --color-solides-dev: #db60ec;
+  --color-solides-red: #ca2037;
+  --color-solides-yellow: #ffba00;
+  --color-solides-green: #00a760;
+  --color-solides-blue: #2657ed;
+  
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Red Hat Display", ui-sans-serif, system-ui, sans-serif;
+}
