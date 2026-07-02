@@ -26,7 +26,7 @@ export default function Hub({ onSelectApp }: HubProps) {
     {
       id: 'folha' as AppId,
       name: 'Eventos de Folha',
-      description: 'Visualize eventos de folha de pagamento de forma simplificada e integrada.',
+      description: 'Crie e acompanhe eventos de folha de pagamento de forma simplificada e integrada.',
       icon: Calculator,
       color: 'text-solides-blue',
       bgLight: 'bg-solides-blue/10',

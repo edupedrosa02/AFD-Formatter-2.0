@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { AnimatePresence } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 import Hub, { AppId } from './components/Hub';
 import FormatadorAFD from './components/FormatadorAFD';
 import EventosFolha from './components/EventosFolha';
@@ -28,13 +28,19 @@ export default function App() {
 
       <AnimatePresence mode="wait">
         {currentApp === 'hub' && (
-          <Hub key="hub" onSelectApp={setCurrentApp} />
+          <motion.div key="hub" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            <Hub onSelectApp={setCurrentApp} />
+          </motion.div>
         )}
         {currentApp === 'afd' && (
-          <FormatadorAFD key="afd" onBack={() => setCurrentApp('hub')} />
+          <motion.div key="afd" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            <FormatadorAFD onBack={() => setCurrentApp('hub')} />
+          </motion.div>
         )}
         {currentApp === 'folha' && (
-          <EventosFolha key="folha" onBack={() => setCurrentApp('hub')} />
+          <motion.div key="folha" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            <EventosFolha onBack={() => setCurrentApp('hub')} />
+          </motion.div>
         )}
       </AnimatePresence>
     </div>

@@ -123,11 +123,8 @@ export default function FormatadorAFD({ onBack }: { onBack: () => void }) {
     const linhasFormatadas = linhas.map((linha) => {
       if (!linha.trim()) return '';
       let novaLinha = linha;
-      novaLinha = novaLinha.replace(/(T\d{2}:\d{2}:\d{2}[+-]\d{4})(?!\d)/g, '$10');
+      novaLinha = novaLinha.replace(/(T\d{2}:\d{2}:\d{2}[+-]\d{4})/g, '$10');
       novaLinha = novaLinha.replace(/\s+([0-9A-Fa-f]{4})\s*$/, '$1');
-      if (!novaLinha.endsWith('000000000')) {
-        novaLinha += '000000000';
-      }
       return novaLinha;
     });
 
